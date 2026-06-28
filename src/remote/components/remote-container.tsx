@@ -92,7 +92,7 @@ export const RemoteContainer = () => {
                         send({ event: 'favorite', favorite: !song.userFavorite, id });
                     }}
                     tooltip={{
-                        label: song?.userFavorite ? 'Unfavorite' : 'Favorite',
+                        label: song?.userFavorite ? 'Unfavourite' : 'Favourite',
                     }}
                     variant="transparent"
                 />

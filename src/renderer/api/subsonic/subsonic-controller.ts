@@ -375,7 +375,7 @@ export const SubsonicController: InternalControllerEndpoint = {
         });
 
         if (res.status !== 200) {
-            throw new Error('Failed to create favorite');
+            throw new Error('Failed to create favourite');
         }
 
         return null;
@@ -431,7 +431,7 @@ export const SubsonicController: InternalControllerEndpoint = {
         });
 
         if (res.status !== 200) {
-            throw new Error('Failed to delete favorite');
+            throw new Error('Failed to delete favourite');
         }
 
         return null;
