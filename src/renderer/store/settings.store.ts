@@ -1100,10 +1100,17 @@ export const sidebarItems: SidebarItemType[] = [
 ];
 
 const homeItems = Object.values(HomeItem).map((item) => ({
+    disabled: false,
     id: item,
 }));
 
-const artistItems = Object.values(ArtistItem).map((item) => ({
+const artistItems = [
+    ArtistItem.BIOGRAPHY,
+    ArtistItem.RECENT_ALBUMS,
+    ArtistItem.SIMILAR_ARTISTS,
+    ArtistItem.TOP_SONGS,
+    ArtistItem.FAVORITE_SONGS,
+].map((item) => ({
     disabled: false,
     id: item,
 }));
