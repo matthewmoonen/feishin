@@ -19,10 +19,15 @@ import { ItemListKey } from '/@/shared/types/types';
 
 export const useAlbumListFilters = (listKey?: ItemListKey) => {
     const resolvedListKey = listKey ?? ItemListKey.ALBUM;
+    const defaultSortBy =
+        resolvedListKey === ItemListKey.ALBUM
+            ? AlbumListSort.FREQUENTLY_PLAYED
+            : AlbumListSort.NAME;
+    const defaultSortOrder = resolvedListKey === ItemListKey.ALBUM ? SortOrder.DESC : SortOrder.ASC;
 
-    const { sortBy } = useSortByFilter<AlbumListSort>(AlbumListSort.NAME, resolvedListKey);
+    const { sortBy } = useSortByFilter<AlbumListSort>(defaultSortBy, resolvedListKey);
 
-    const { sortOrder } = useSortOrderFilter(SortOrder.ASC, resolvedListKey);
+    const { sortOrder } = useSortOrderFilter(defaultSortOrder, resolvedListKey);
 
     const { searchTerm, setSearchTerm } = useSearchTermFilter('');
 

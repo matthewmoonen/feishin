@@ -35,6 +35,9 @@ export const AlbumListHeaderFilters = ({ toggleGenreTarget }: { toggleGenreTarge
     const songFilters = useSongListFilters();
 
     const { pageKey } = useListContext();
+    const defaultSortBy =
+        pageKey === ItemListKey.ALBUM ? AlbumListSort.FREQUENTLY_PLAYED : AlbumListSort.NAME;
+    const defaultSortOrder = pageKey === ItemListKey.ALBUM ? SortOrder.DESC : SortOrder.ASC;
 
     const choice = useMemo(() => {
         return target === GenreTarget.ALBUM
@@ -82,13 +85,13 @@ export const AlbumListHeaderFilters = ({ toggleGenreTarget }: { toggleGenreTarge
                     </>
                 )}
                 <ListSortByDropdown
-                    defaultSortByValue={AlbumListSort.NAME}
+                    defaultSortByValue={defaultSortBy}
                     itemType={LibraryItem.ALBUM}
                     listKey={pageKey as ItemListKey}
                 />
                 <Divider orientation="vertical" />
                 <ListSortOrderToggleButton
-                    defaultSortOrder={SortOrder.ASC}
+                    defaultSortOrder={defaultSortOrder}
                     listKey={pageKey as ItemListKey}
                 />
                 <ListFiltersModal isActive={hasActiveFilters} itemType={LibraryItem.ALBUM} />

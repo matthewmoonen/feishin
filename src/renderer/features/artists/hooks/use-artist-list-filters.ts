@@ -3,13 +3,16 @@ import { useSelectFilter } from '/@/renderer/features/shared/hooks/use-select-fi
 import { useSortByFilter } from '/@/renderer/features/shared/hooks/use-sort-by-filter';
 import { useSortOrderFilter } from '/@/renderer/features/shared/hooks/use-sort-order-filter';
 import { FILTER_KEYS } from '/@/renderer/features/shared/utils';
-import { ArtistListSort } from '/@/shared/types/domain-types';
+import { ArtistListSort, SortOrder } from '/@/shared/types/domain-types';
 import { ItemListKey } from '/@/shared/types/types';
 
 export const useArtistListFilters = () => {
-    const { sortBy } = useSortByFilter<ArtistListSort>(null, ItemListKey.ARTIST);
+    const { sortBy } = useSortByFilter<ArtistListSort>(
+        ArtistListSort.PLAY_COUNT,
+        ItemListKey.ARTIST,
+    );
 
-    const { sortOrder } = useSortOrderFilter(null, ItemListKey.ARTIST);
+    const { sortOrder } = useSortOrderFilter(SortOrder.DESC, ItemListKey.ARTIST);
 
     const { searchTerm, setSearchTerm } = useSearchTermFilter('');
 

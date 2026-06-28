@@ -35,6 +35,9 @@ export const SongListHeaderFilters = ({ toggleGenreTarget }: { toggleGenreTarget
     const songFilters = useSongListFilters();
 
     const { pageKey } = useListContext();
+    const defaultSortBy =
+        pageKey === ItemListKey.SONG ? SongListSort.PLAY_COUNT : SongListSort.NAME;
+    const defaultSortOrder = pageKey === ItemListKey.SONG ? SortOrder.DESC : SortOrder.ASC;
 
     const handleToggleGenreTarget = useCallback(() => {
         // Clear all filter query states
@@ -80,13 +83,13 @@ export const SongListHeaderFilters = ({ toggleGenreTarget }: { toggleGenreTarget
                     </>
                 )}
                 <ListSortByDropdown
-                    defaultSortByValue={SongListSort.NAME}
+                    defaultSortByValue={defaultSortBy}
                     itemType={LibraryItem.SONG}
                     listKey={pageKey as ItemListKey}
                 />
                 <Divider orientation="vertical" />
                 <ListSortOrderToggleButton
-                    defaultSortOrder={SortOrder.ASC}
+                    defaultSortOrder={defaultSortOrder}
                     listKey={pageKey as ItemListKey}
                 />
                 <ListFiltersModal isActive={hasActiveFilters} itemType={LibraryItem.SONG} />

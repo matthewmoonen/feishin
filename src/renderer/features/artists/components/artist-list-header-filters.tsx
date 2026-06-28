@@ -25,13 +25,13 @@ export const ArtistListHeaderFilters = () => {
         <Flex justify="space-between">
             <Group gap="sm" w="100%">
                 <ListSortByDropdown
-                    defaultSortByValue={ArtistListSort.NAME}
+                    defaultSortByValue={ArtistListSort.PLAY_COUNT}
                     itemType={LibraryItem.ARTIST}
                     listKey={ItemListKey.ARTIST}
                 />
                 <Divider orientation="vertical" />
                 <ListSortOrderToggleButton
-                    defaultSortOrder={SortOrder.ASC}
+                    defaultSortOrder={SortOrder.DESC}
                     listKey={ItemListKey.ARTIST}
                 />
                 {rolesQuery.data && rolesQuery.data.length > 0 && (
