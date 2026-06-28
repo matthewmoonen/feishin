@@ -504,6 +504,7 @@
             "selectMusicFolder": "Select music folder",
             "noMusicFolder": "No music folder selected",
             "multipleMusicFolders": "{{count}} music folders selected",
+            "signOut": "Sign out",
             "settings": "$t(common.setting, {\"count\": 2})",
             "version": "Version {{version}}"
         },

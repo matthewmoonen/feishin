@@ -12,9 +12,11 @@ import { ServerList } from '/@/renderer/features/servers/components/server-list'
 import { openSettingsModal } from '/@/renderer/features/settings/utils/open-settings-modal';
 import { ServerSelector } from '/@/renderer/features/sidebar/components/server-selector';
 import { openReleaseNotesModal } from '/@/renderer/release-notes-modal';
+import { AppRoute } from '/@/renderer/router/routes';
 import {
     useAppStore,
     useAppStoreActions,
+    useAuthStoreActions,
     useCommandPalette,
     useCurrentServer,
     useGeneralSettings,
@@ -85,6 +87,7 @@ export const AppMenu = () => {
     const collapsed = useAppStore((state) => state.sidebar.collapsed);
     const privateMode = useAppStore((state) => state.privateMode);
     const { setPrivateMode, setSideBar } = useAppStoreActions();
+    const { deleteServer } = useAuthStoreActions();
     const { setSettings } = useSettingsStoreActions();
     const settings = useGeneralSettings();
     const currentServer = useCurrentServer();
@@ -123,6 +126,13 @@ export const AppMenu = () => {
             children: <ServerList />,
             title: t('page.manageServers.title'),
         });
+    };
+
+    const handleSignOut = () => {
+        if (!currentServer) return;
+
+        deleteServer(currentServer.id);
+        navigate(AppRoute.ACTION_REQUIRED);
     };
 
     const handleQuit = () => {
@@ -225,6 +235,18 @@ export const AppMenu = () => {
                 label: t('page.appMenu.manageServers'),
                 leftSection: <Icon icon="edit" />,
                 onClick: handleManageServersModal,
+                type: 'item',
+            },
+            type: 'conditional-item',
+        },
+        {
+            condition: isServerLock() && !!currentServer,
+            id: 'sign-out',
+            item: {
+                icon: 'signOut',
+                iconColor: 'error',
+                label: t('page.appMenu.signOut', { defaultValue: 'Sign out' }),
+                onClick: handleSignOut,
                 type: 'item',
             },
             type: 'conditional-item',

@@ -1100,7 +1100,7 @@ export const sidebarItems: SidebarItemType[] = [
 ];
 
 const homeItems = Object.values(HomeItem).map((item) => ({
-    disabled: false,
+    disabled: item === HomeItem.FREQUENTLY_PLAYED,
     id: item,
 }));
 

@@ -1,5 +1,6 @@
 import { openModal } from '@mantine/modals';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
+import isElectron from 'is-electron';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router';
 
@@ -17,12 +18,14 @@ import { Icon } from '/@/shared/components/icon/icon';
 import { ServerListItemWithCredential, ServerType } from '/@/shared/types/domain-types';
 import { ServerFeature } from '/@/shared/types/features-types';
 
+const localSettings = isElectron() ? window.api.localSettings : null;
+
 export const ServerSelectorItems = () => {
     const { t } = useTranslation();
     const navigate = useNavigate();
     const currentServer = useCurrentServer();
     const serverList = useServerList();
-    const { setCurrentServer, setMusicFolderId } = useAuthStoreActions();
+    const { deleteServer, setCurrentServer, setMusicFolderId } = useAuthStoreActions();
 
     const { data: musicFolders } = useQuery(
         currentServer
@@ -89,6 +92,14 @@ export const ServerSelectorItems = () => {
         });
     };
 
+    const handleSignOut = () => {
+        localSettings?.passwordRemove(currentServer.id);
+        deleteServer(currentServer.id);
+        setMusicFolderId(undefined);
+        queryClient.removeQueries();
+        navigate(AppRoute.ACTION_REQUIRED);
+    };
+
     return (
         <>
             <DropdownMenu.Label>{t('page.appMenu.selectServer')}</DropdownMenu.Label>
@@ -126,6 +137,15 @@ export const ServerSelectorItems = () => {
                     onClick={handleManageServersModal}
                 >
                     {t('page.appMenu.manageServers')}
+                </DropdownMenu.Item>
+            )}
+            {isServerLock() && (
+                <DropdownMenu.Item
+                    isDanger
+                    leftSection={<Icon icon="signOut" />}
+                    onClick={handleSignOut}
+                >
+                    {t('page.appMenu.signOut', { defaultValue: 'Sign out' })}
                 </DropdownMenu.Item>
             )}
             {musicFolders && musicFolders.items.length > 0 && (
