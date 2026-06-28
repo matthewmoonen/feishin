@@ -8,7 +8,7 @@ import { shallow } from 'zustand/shallow';
 import { createWithEqualityFn } from 'zustand/traditional';
 
 import { AlbumListSort, SongListSort, SortOrder } from '/@/shared/types/domain-types';
-import { Platform } from '/@/shared/types/types';
+import { ItemListKey, Platform } from '/@/shared/types/types';
 
 export interface AppSlice extends AppState {
     actions: {
@@ -220,8 +220,8 @@ export const useAppStore = createWithEqualityFn<AppSlice>()(
                 globalExpanded: null,
                 isReorderingQueue: false,
                 pageSidebar: {
-                    album: true,
-                    song: true,
+                    [ItemListKey.ALBUM]: false,
+                    [ItemListKey.SONG]: false,
                 },
                 platform: Platform.WINDOWS,
                 privateMode: false,
