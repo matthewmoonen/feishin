@@ -69,12 +69,12 @@ const deepMergeIntoState = <T extends Record<string, any>>(
 
 const HomeItemSchema = z.enum([
     'frequentlyPlayed',
-    'genres',
-    'mostPlayed',
     'random',
-    'recentlyAdded',
     'recentlyPlayed',
+    'recentlyAdded',
+    'genres',
     'recentlyReleased',
+    'mostPlayed',
 ]);
 
 const PlayerItemSchema = z.enum([
@@ -1100,7 +1100,6 @@ export const sidebarItems: SidebarItemType[] = [
 ];
 
 const homeItems = Object.values(HomeItem).map((item) => ({
-    disabled: item === HomeItem.FREQUENTLY_PLAYED,
     id: item,
 }));
 
