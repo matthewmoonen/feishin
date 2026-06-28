@@ -1068,7 +1068,7 @@ export const sidebarItems: SidebarItemType[] = [
         route: AppRoute.LIBRARY_GENRES,
     },
     {
-        disabled: false,
+        disabled: true,
         id: 'Folders',
         label: i18n.t('page.sidebar.folders'),
         route: AppRoute.LIBRARY_FOLDERS,
@@ -1086,7 +1086,7 @@ export const sidebarItems: SidebarItemType[] = [
         route: '',
     },
     {
-        disabled: false,
+        disabled: true,
         id: 'Radio',
         label: i18n.t('page.sidebar.radio'),
         route: AppRoute.RADIO,
