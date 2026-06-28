@@ -1050,7 +1050,7 @@ export const sidebarItems: SidebarItemType[] = [
         route: AppRoute.LIBRARY_SONGS,
     },
     {
-        disabled: false,
+        disabled: true,
         id: 'Artists',
         label: i18n.t('page.sidebar.albumArtists'),
         route: AppRoute.LIBRARY_ALBUM_ARTISTS,
