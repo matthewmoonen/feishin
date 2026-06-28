@@ -109,6 +109,7 @@
         "fast-xml-parser": "^5.8.0",
         "format-duration": "^3.0.2",
         "fuse.js": "^7.4.2",
+        "hls.js": "^1.6.15",
         "i18next": "^25.10.10",
         "icecast-metadata-stats": "^0.1.12",
         "idb-keyval": "^6.2.5",

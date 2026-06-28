@@ -1,5 +1,6 @@
 import { contextBridge, webUtils } from 'electron';
 
+import { animatedCovers } from './animated-covers';
 import { autodiscover } from './autodiscover';
 import { browser } from './browser';
 import { discordRpc } from './discord-rpc';
@@ -14,6 +15,7 @@ import { visualizer } from './visualizer';
 
 // Custom APIs for renderer
 const api = {
+    animatedCovers,
     autodiscover,
     browser,
     discordRpc,
