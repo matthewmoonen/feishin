@@ -1100,7 +1100,7 @@ export const sidebarItems: SidebarItemType[] = [
 ];
 
 const homeItems = Object.values(HomeItem).map((item) => ({
-    disabled: false,
+    disabled: item === HomeItem.GENRES,
     id: item,
 }));
 
@@ -1115,7 +1115,26 @@ const artistItems = [
     id: item,
 }));
 
-const artistReleaseTypeItems = Object.values(ArtistReleaseTypeItem).map((item) => ({
+const artistReleaseTypeItems = [
+    ArtistReleaseTypeItem.RELEASE_TYPE_ALBUM,
+    ArtistReleaseTypeItem.RELEASE_TYPE_EP,
+    ArtistReleaseTypeItem.RELEASE_TYPE_SINGLE,
+    ArtistReleaseTypeItem.APPEARS_ON,
+    ArtistReleaseTypeItem.RELEASE_TYPE_BROADCAST,
+    ArtistReleaseTypeItem.RELEASE_TYPE_COMPILATION,
+    ArtistReleaseTypeItem.RELEASE_TYPE_AUDIO_DRAMA,
+    ArtistReleaseTypeItem.RELEASE_TYPE_AUDIOBOOK,
+    ArtistReleaseTypeItem.RELEASE_TYPE_INTERVIEW,
+    ArtistReleaseTypeItem.RELEASE_TYPE_LIVE,
+    ArtistReleaseTypeItem.RELEASE_TYPE_MIXTAPE_STREET,
+    ArtistReleaseTypeItem.RELEASE_TYPE_OTHER,
+    ArtistReleaseTypeItem.RELEASE_TYPE_REMIX,
+    ArtistReleaseTypeItem.RELEASE_TYPE_DJ_MIX,
+    ArtistReleaseTypeItem.RELEASE_TYPE_DEMO,
+    ArtistReleaseTypeItem.RELEASE_TYPE_FIELD_RECORDING,
+    ArtistReleaseTypeItem.RELEASE_TYPE_SOUNDTRACK,
+    ArtistReleaseTypeItem.RELEASE_TYPE_SPOKENWORD,
+].map((item) => ({
     disabled: false,
     id: item,
 }));
