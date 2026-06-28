@@ -260,6 +260,7 @@
         "isRated": "Oylandı",
         "isRecentlyPlayed": "Yakın zamanda çalındı",
         "lastPlayed": "Son çalınan",
+        "frequentlyPlayed": "Sık çalınan",
         "mostPlayed": "En çok çalınan",
         "name": "İsim",
         "note": "Not",
@@ -467,6 +468,7 @@
         },
         "home": {
             "explore": "Kütüphanenizden keşfedin",
+            "frequentlyPlayed": "Sık çalınan",
             "mostPlayed": "En çok çalınan",
             "newlyAdded": "Yeni eklenenler",
             "recentlyPlayed": "Yakınlarda çalınanlar",

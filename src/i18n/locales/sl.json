@@ -248,6 +248,7 @@
         "isRated": "Je ocenjen",
         "isRecentlyPlayed": "Je bil nedavno predvajan",
         "lastPlayed": "Zadnje predvajano",
+        "frequentlyPlayed": "Pogosto predvajano",
         "mostPlayed": "Najpogosteje predvajano",
         "name": "Ime",
         "note": "Opomba",
@@ -435,6 +436,7 @@
         },
         "home": {
             "explore": "Razišči knjižnico",
+            "frequentlyPlayed": "Pogosto predvajano",
             "mostPlayed": "Najpogosteje predvajano",
             "newlyAdded": "Zadnje dodane izdaje",
             "recentlyPlayed": "Nedavno predvajano",

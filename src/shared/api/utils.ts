@@ -452,6 +452,23 @@ export const sortAlbumArtistList = (
     return results;
 };
 
+export const weightedShuffleByPlayCount = <T extends { playCount: null | number }>(
+    items: T[],
+): T[] => {
+    return items
+        .map((item) => {
+            const weight = Math.sqrt(Math.max(item.playCount ?? 0, 0) + 1);
+            const random = Math.max(Math.random(), Number.EPSILON);
+
+            return {
+                item,
+                score: -Math.log(random) / weight,
+            };
+        })
+        .sort((a, b) => a.score - b.score)
+        .map(({ item }) => item);
+};
+
 export const sortAlbumList = (albums: Album[], sortBy: AlbumListSort, sortOrder: SortOrder) => {
     let results = albums;
 
@@ -470,6 +487,9 @@ export const sortAlbumList = (albums: Album[], sortBy: AlbumListSort, sortOrder:
             break;
         case AlbumListSort.FAVORITED:
             results = orderBy(results, ['starred'], [order]);
+            break;
+        case AlbumListSort.FREQUENTLY_PLAYED:
+            results = weightedShuffleByPlayCount(results);
             break;
         case AlbumListSort.ID:
             results = sortOrder === SortOrder.DESC ? [...results].reverse() : results;

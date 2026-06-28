@@ -671,6 +671,7 @@
         "playbackPausedDueToError": "La reproducción fue pausada debido a un error"
     },
     "filter": {
+        "frequentlyPlayed": "Reproducidos frecuentemente",
         "mostPlayed": "Más reproducidos",
         "isCompilation": "Es una compilación",
         "recentlyPlayed": "Recientemente reproducido",
@@ -784,6 +785,7 @@
             "goTo": "Ir a"
         },
         "home": {
+            "frequentlyPlayed": "Reproducidos frecuentemente",
             "mostPlayed": "Más reproducidos",
             "newlyAdded": "Nuevos lanzamientos añadidos",
             "title": "$t(common.home)",

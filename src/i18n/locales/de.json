@@ -207,6 +207,7 @@
         "playbackPausedDueToError": "Die Wiedergabe wurde aufgrund eines Fehlers pausiert"
     },
     "filter": {
+        "frequentlyPlayed": "Häufig gespielt",
         "mostPlayed": "Meistgespielt",
         "comment": "Kommentar",
         "playCount": "Anzahl abgespielt",
@@ -558,6 +559,7 @@
             "multipleMusicFolders": "{{count}} Musikverzeichnis ausgewählt"
         },
         "home": {
+            "frequentlyPlayed": "Häufig gespielt",
             "mostPlayed": "Meistgespielt",
             "newlyAdded": "Neu hinzugefügte veröffentlichungen",
             "explore": "Entdecke deine bibliothek",

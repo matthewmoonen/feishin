@@ -495,6 +495,7 @@
         "noNetworkDescription": "Impossibile connettersi al server"
     },
     "filter": {
+        "frequentlyPlayed": "Riprodotti frequentemente",
         "mostPlayed": "Più riprodotti",
         "comment": "Commento",
         "playCount": "Numero di riproduzioni",
@@ -628,6 +629,7 @@
             "goTo": "Vai a"
         },
         "home": {
+            "frequentlyPlayed": "Riprodotti frequentemente",
             "mostPlayed": "Più riprodotti",
             "newlyAdded": "Nuovi rilasci aggiunti",
             "title": "$t(common.home)",

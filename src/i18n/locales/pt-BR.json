@@ -531,6 +531,7 @@
     },
     "page": {
         "home": {
+            "frequentlyPlayed": "Tocado com frequência",
             "mostPlayed": "Mais tocado",
             "newlyAdded": "Lançamentos recém-adicionados",
             "title": "$t(common.home)",
@@ -688,6 +689,7 @@
     "filter": {
         "title": "Titulo",
         "disc": "Disco",
+        "frequentlyPlayed": "Tocado com frequência",
         "mostPlayed": "Mais tocado",
         "album": "$t(entity.album, {\"count\": 1})",
         "name": "Nome",

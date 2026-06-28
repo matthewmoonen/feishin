@@ -648,6 +648,7 @@
         "playbackPausedDueToError": "发生错误，播放已暂停"
     },
     "filter": {
+        "frequentlyPlayed": "经常播放",
         "mostPlayed": "最多播放过",
         "playCount": "播放次数",
         "recentlyPlayed": "最近播放",
@@ -756,6 +757,7 @@
             "commandPalette": "打开命令面板"
         },
         "home": {
+            "frequentlyPlayed": "经常播放",
             "mostPlayed": "最多播放",
             "newlyAdded": "最近添加的发布",
             "explore": "从库中搜索",

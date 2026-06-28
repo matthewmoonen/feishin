@@ -180,6 +180,7 @@
         "settingsSyncError": "Diskrepans hittades mellan inställningarna för renderingsprocessen och huvudprocessen. starta om applikationen för att ändringarna ska tillämpas"
     },
     "filter": {
+        "frequentlyPlayed": "Ofta spelade",
         "mostPlayed": "Mest spelade",
         "comment": "Kommentar",
         "playCount": "Antal spelningar",
@@ -361,6 +362,7 @@
             "nowPlaying": "Nu spelas"
         },
         "home": {
+            "frequentlyPlayed": "Ofta spelade",
             "mostPlayed": "Mest spelade",
             "newlyAdded": "Nytillkomna utgåvor",
             "explore": "Utforska från ditt bibliotek",

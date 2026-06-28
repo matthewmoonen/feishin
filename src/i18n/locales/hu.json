@@ -238,6 +238,7 @@
         "isCompilation": "Gyűjtemény",
         "isRated": "Értékelt",
         "lastPlayed": "Utoljára lejátszva",
+        "frequentlyPlayed": "Gyakran játszott",
         "mostPlayed": "Legtöbbször lejátszott",
         "note": "Megjegyzés",
         "random": "Véletlenszerű",
@@ -494,6 +495,7 @@
         },
         "home": {
             "explore": "Fedezd fel könyvtárából",
+            "frequentlyPlayed": "Gyakran játszott",
             "mostPlayed": "Legtöbbet játszott",
             "newlyAdded": "Újonnan hozzáadott megjelenések",
             "recentlyPlayed": "Nemrég játszott",

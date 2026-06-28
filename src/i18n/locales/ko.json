@@ -238,6 +238,7 @@
         "search": "검색",
         "dateAdded": "추가된 날짜",
         "lastPlayed": "마지막으로 재생한",
+        "frequentlyPlayed": "자주 재생됨",
         "mostPlayed": "가장 많이 재생한",
         "album": "$t(entity.album, {\"count\": 1})",
         "albumArtist": "$t(entity.albumArtist, {\"count\": 1})",
@@ -515,6 +516,7 @@
         },
         "home": {
             "explore": "라이브러리 탐색",
+            "frequentlyPlayed": "자주 재생됨",
             "mostPlayed": "자주 플레이된 곡",
             "newlyAdded": "최근에 추가된 곡",
             "recentlyPlayed": "최근에 플레이된 곡",

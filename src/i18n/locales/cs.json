@@ -780,6 +780,7 @@
         "playbackPausedDueToError": "Přehrávání bylo pozastaveno z důvodu chyby"
     },
     "filter": {
+        "frequentlyPlayed": "Často přehrávané",
         "mostPlayed": "Nejvíce přehráváno",
         "comment": "Komentář",
         "playCount": "Počet přehrání",
@@ -918,6 +919,7 @@
             "goTo": "Přejít na"
         },
         "home": {
+            "frequentlyPlayed": "Často přehrávané",
             "mostPlayed": "Nejpřehrávanější",
             "newlyAdded": "Nově přidáno",
             "title": "$t(common.home)",

@@ -398,6 +398,7 @@
         "isRated": "Baloratua dago",
         "isRecentlyPlayed": "Duela gutxi entzundakoa",
         "lastPlayed": "Azken aldiz entzundakoa",
+        "frequentlyPlayed": "Maiz entzundakoa",
         "mostPlayed": "Gehien entzundakoa",
         "playCount": "Erreprodukzio kopurua",
         "recentlyAdded": "Duela gutxi gehitutakoa",
@@ -940,6 +941,7 @@
         },
         "home": {
             "title": "$t(common.home)",
+            "frequentlyPlayed": "Maiz entzundakoa",
             "mostPlayed": "Gehien entzundakoak",
             "newlyAdded": "Azken aldian gehitutako argitalpenak",
             "recentlyPlayed": "Azken aldian entzundakoak",

@@ -68,6 +68,7 @@ const deepMergeIntoState = <T extends Record<string, any>>(
 };
 
 const HomeItemSchema = z.enum([
+    'frequentlyPlayed',
     'genres',
     'mostPlayed',
     'random',
@@ -856,6 +857,7 @@ export enum GenreTarget {
 }
 
 export enum HomeItem {
+    FREQUENTLY_PLAYED = 'frequentlyPlayed',
     GENRES = 'genres',
     MOST_PLAYED = 'mostPlayed',
     RANDOM = 'random',

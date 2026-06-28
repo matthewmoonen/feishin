@@ -261,6 +261,7 @@
         "isRated": "Possui avaliação",
         "isRecentlyPlayed": "Foi tocado recentemente",
         "lastPlayed": "Última tocada",
+        "frequentlyPlayed": "Tocado com frequência",
         "mostPlayed": "Mais tocado",
         "name": "Nome",
         "note": "Nota",
@@ -471,6 +472,7 @@
         },
         "home": {
             "explore": "Explore a sua biblioteca",
+            "frequentlyPlayed": "Tocado com frequência",
             "mostPlayed": "Mais tocado",
             "newlyAdded": "Lançamentos recém-adicionados",
             "recentlyPlayed": "Tocado recentemente",

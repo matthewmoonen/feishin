@@ -755,6 +755,7 @@
         "playbackPausedDueToError": "エラーのため再生が一時停止されました"
     },
     "filter": {
+        "frequentlyPlayed": "頻繁に再生",
         "mostPlayed": "最も多く再生",
         "playCount": "再生回数",
         "isCompilation": "コンピレーションアルバム",
@@ -893,6 +894,7 @@
             "goTo": "移動"
         },
         "home": {
+            "frequentlyPlayed": "頻繁に再生",
             "mostPlayed": "最も多く再生",
             "newlyAdded": "新規追加リリース",
             "title": "$t(common.home)",

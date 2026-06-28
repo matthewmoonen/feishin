@@ -8,10 +8,13 @@ import { SubsonicController } from '/@/renderer/api/subsonic/subsonic-controller
 import { ndNormalize } from '/@/shared/api/navidrome/navidrome-normalize';
 import { NDRadioListSort, NDSongListSort } from '/@/shared/api/navidrome/navidrome-types';
 import { ssNormalize } from '/@/shared/api/subsonic/subsonic-normalize';
-import { getFeatures, hasFeature, hasFeatureWithVersion, VersionInfo } from '/@/shared/api/utils';
+import {getFeatures, hasFeature, hasFeatureWithVersion, VersionInfo, weightedShuffleByPlayCount,} from '/@/shared/api/utils';
 import {
+    AlbumArtistListSort,
     albumArtistListSortMap,
+    AlbumListSort,
     albumListSortMap,
+    ArtistListSort,
     AuthenticationResponse,
     DeleteArtistImageArgs,
     DeleteArtistImageResponse,
@@ -344,19 +347,24 @@ export const NavidromeController: InternalControllerEndpoint = {
             throw new Error('Failed to get album artist list');
         }
 
-        return {
-            items: res.body.data.map((albumArtist) =>
-                // Navidrome native API will return only external URL small/medium/large
-                // image URL. Set large image to undefined to force `albumArtist` to use
-                // /rest/getCoverArt.view?id=ar-...
-                ndNormalize.albumArtist(
-                    {
-                        ...albumArtist,
-                        largeImageUrl: undefined,
-                    },
-                    apiClientProps.server,
-                ),
+        const items = res.body.data.map((albumArtist) =>
+            // Navidrome native API will return only external URL small/medium/large
+            // image URL. Set large image to undefined to force `albumArtist` to use
+            // /rest/getCoverArt.view?id=ar-...
+            ndNormalize.albumArtist(
+                {
+                    ...albumArtist,
+                    largeImageUrl: undefined,
+                },
+                apiClientProps.server,
             ),
+        );
+
+        return {
+            items:
+                query.sortBy === AlbumArtistListSort.FREQUENTLY_PLAYED
+                    ? weightedShuffleByPlayCount(items)
+                    : items,
             startIndex: query.startIndex,
             totalRecordCount: Number(res.body.headers.get('x-total-count') || 0),
         };
@@ -450,8 +458,13 @@ export const NavidromeController: InternalControllerEndpoint = {
             throw new Error('Failed to get album list');
         }
 
+        const items = res.body.data.map((album) => ndNormalize.album(album, apiClientProps.server));
+
         return {
-            items: res.body.data.map((album) => ndNormalize.album(album, apiClientProps.server)),
+            items:
+                query.sortBy === AlbumListSort.FREQUENTLY_PLAYED
+                    ? weightedShuffleByPlayCount(items)
+                    : items,
             startIndex: query?.startIndex || 0,
             totalRecordCount: Number(res.body.headers.get('x-total-count') || 0),
         };
@@ -509,19 +522,24 @@ export const NavidromeController: InternalControllerEndpoint = {
             throw new Error('Failed to get artist list');
         }
 
-        return {
-            items: res.body.data.map((albumArtist) =>
-                // Navidrome native API will return only external URL small/medium/large
-                // image URL. Set large image to undefined to force `albumArtist` to use
-                // /rest/getCoverArt.view?id=ar-...
-                ndNormalize.albumArtist(
-                    {
-                        ...albumArtist,
-                        largeImageUrl: undefined,
-                    },
-                    apiClientProps.server,
-                ),
+        const items = res.body.data.map((albumArtist) =>
+            // Navidrome native API will return only external URL small/medium/large
+            // image URL. Set large image to undefined to force `albumArtist` to use
+            // /rest/getCoverArt.view?id=ar-...
+            ndNormalize.albumArtist(
+                {
+                    ...albumArtist,
+                    largeImageUrl: undefined,
+                },
+                apiClientProps.server,
             ),
+        );
+
+        return {
+            items:
+                query.sortBy === ArtistListSort.FREQUENTLY_PLAYED
+                    ? weightedShuffleByPlayCount(items)
+                    : items,
             startIndex: query.startIndex,
             totalRecordCount: Number(res.body.headers.get('x-total-count') || 0),
         };

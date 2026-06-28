@@ -386,6 +386,7 @@
         "duration": "Длительность",
         "fromYear": "Год",
         "criticRating": "Рейтинг критиков",
+        "frequentlyPlayed": "Часто воспроизводимые",
         "mostPlayed": "Слушают чаще всего",
         "comment": "Комментировать",
         "playCount": "Количество воспроизведений",
@@ -572,6 +573,7 @@
             "playSimilarSongs": "$t(player.playSimilarSongs)"
         },
         "home": {
+            "frequentlyPlayed": "Часто воспроизводимые",
             "mostPlayed": "Слушают чаще всего",
             "newlyAdded": "Недавно добавленные релизы",
             "title": "$t(common.home)",

@@ -274,6 +274,7 @@
         "isRated": "on hinnatud",
         "isRecentlyPlayed": "on hiljuti esitatud",
         "lastPlayed": "Viimati esitatud",
+        "frequentlyPlayed": "Sageli esitatud",
         "mostPlayed": "Enim esitatud",
         "name": "Nimi",
         "note": "Märkus",
@@ -580,6 +581,7 @@
         "home": {
             "explore": "Avasta oma kogust",
             "genres": "$t(entity.genre, {\"count\": 2})",
+            "frequentlyPlayed": "Sageli esitatud",
             "mostPlayed": "Enim esitatud",
             "newlyAdded": "Hiljuti lisatud albumid",
             "recentlyPlayed": "Hiljuti esitatud",

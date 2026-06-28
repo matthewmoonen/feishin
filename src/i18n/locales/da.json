@@ -260,6 +260,7 @@
         "recentlyPlayed": "Nyligt afspillet",
         "recentlyUpdated": "Nyligt opdateret",
         "lastPlayed": "Sidst afspillet",
+        "frequentlyPlayed": "Ofte afspillet",
         "mostPlayed": "Mest afspillet",
         "name": "Navn",
         "note": "Note",
@@ -555,6 +556,7 @@
         "home": {
             "explore": "Udforsk fra dit bibliotek",
             "genres": "$t(entity.genre, {\"count\": 2})",
+            "frequentlyPlayed": "Ofte afspillet",
             "mostPlayed": "Mest afspillet",
             "newlyAdded": "Nyligt tilføjede udgivelser",
             "recentlyPlayed": "Senest afspillet",

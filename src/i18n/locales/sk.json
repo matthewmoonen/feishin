@@ -152,6 +152,7 @@
         "isRated": "Je hodnotený",
         "isRecentlyPlayed": "Je nedávno hraný",
         "lastPlayed": "Posledne hraný",
+        "frequentlyPlayed": "Často hrané",
         "mostPlayed": "Najhranejší",
         "note": "Poznámka",
         "owner": "$t(common.owner)",
@@ -427,6 +428,7 @@
         },
         "home": {
             "explore": "Preskúmať tvoju knižnicu",
+            "frequentlyPlayed": "Často hrané",
             "mostPlayed": "Najhranejší",
             "newlyAdded": "Novopridané vydania",
             "recentlyPlayed": "Nedávno hrané",

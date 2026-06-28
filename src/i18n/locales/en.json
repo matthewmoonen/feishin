@@ -265,6 +265,7 @@
         "disc": "Disc",
         "duration": "Duration",
         "favorited": "Favorited",
+        "frequentlyPlayed": "Frequently played",
         "fromYear": "From year",
         "genre": "$t(entity.genre, {\"count\": 1})",
         "id": "ID",
@@ -585,6 +586,7 @@
         },
         "home": {
             "explore": "Explore from your library",
+            "frequentlyPlayed": "Frequently played",
             "genres": "$t(entity.genre, {\"count\": 2})",
             "mostPlayed": "Most Played",
             "newlyAdded": "Newly added releases",

@@ -265,6 +265,7 @@
         "disc": "Skive",
         "isPublic": "Er offentlig",
         "isRecentlyPlayed": "Er avspilt nylig",
+        "frequentlyPlayed": "Ofte spilt",
         "mostPlayed": "Mest avspilt",
         "owner": "$t(common.owner)",
         "path": "Sti",
@@ -498,6 +499,7 @@
         "home": {
             "recentlyPlayed": "Nylig avspilt",
             "explore": "Utforsk biblioteket ditt",
+            "frequentlyPlayed": "Ofte spilt",
             "mostPlayed": "Mest spilt",
             "newlyAdded": "Utgivelser nylig lagt til",
             "title": "$t(common.home)"

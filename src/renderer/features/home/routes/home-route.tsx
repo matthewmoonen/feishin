@@ -45,6 +45,13 @@ const HomeRoute = () => {
     const isJellyfin = server?.type === ServerType.JELLYFIN;
 
     const carousels = {
+        [HomeItem.FREQUENTLY_PLAYED]: {
+            enableRefresh: true,
+            itemType: LibraryItem.ALBUM,
+            sortBy: AlbumListSort.FREQUENTLY_PLAYED,
+            sortOrder: SortOrder.DESC,
+            title: t('page.home.frequentlyPlayed'),
+        },
         [HomeItem.MOST_PLAYED]: {
             enableRefresh: true,
             itemType: isJellyfin ? LibraryItem.SONG : LibraryItem.ALBUM,
@@ -82,7 +89,11 @@ const HomeRoute = () => {
         },
     };
 
-    const sortedItems = homeItems.filter((item) => !item.disabled);
+    const sortedItems = homeItems.filter(
+        (item) =>
+            !item.disabled &&
+            (item.id !== HomeItem.FREQUENTLY_PLAYED || server.type === ServerType.NAVIDROME),
+    );
 
     const sortedCarousel = sortedItems
         .filter((item) => item.id !== HomeItem.GENRES)

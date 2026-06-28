@@ -382,6 +382,7 @@
         "loginRateError": "Previše pokušaja prijave, molimo pokušajte ponovo za nekoliko sekundi"
     },
     "filter": {
+        "frequentlyPlayed": "Često puštano",
         "mostPlayed": "Najviše puštana",
         "comment": "Komentar",
         "playCount": "Broj slušanja",
@@ -488,6 +489,7 @@
             "removeFromQueue": "$t(action.removeFromQueue)"
         },
         "home": {
+            "frequentlyPlayed": "Često puštano",
             "mostPlayed": "Najviše puštano",
             "newlyAdded": "Nedavno dodate pesme",
             "title": "$t(common.home)",

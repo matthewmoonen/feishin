@@ -290,6 +290,7 @@
         "isRated": "Є оціненим",
         "isRecentlyPlayed": "Нещодавно відтворено",
         "lastPlayed": "Останнє відтворене",
+        "frequentlyPlayed": "Часто відтворювані",
         "mostPlayed": "Найбільш відтворювані",
         "name": "Назва",
         "note": "Примітка",
@@ -597,6 +598,7 @@
         "home": {
             "explore": "Дослідити з вашої бібліотеки",
             "genres": "$t(entity.genre, {\"count\": 2})",
+            "frequentlyPlayed": "Часто відтворювані",
             "mostPlayed": "Найбільш відтворені",
             "newlyAdded": "Нещодавно додані релізи",
             "recentlyPlayed": "Нещодавно відтворені"

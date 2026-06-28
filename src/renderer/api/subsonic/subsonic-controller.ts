@@ -76,6 +76,7 @@ const ALBUM_LIST_SORT_MAPPING: Record<AlbumListSort, AlbumListSortType | undefin
     [AlbumListSort.DURATION]: undefined,
     [AlbumListSort.EXPLICIT_STATUS]: undefined,
     [AlbumListSort.FAVORITED]: AlbumListSortType.STARRED,
+    [AlbumListSort.FREQUENTLY_PLAYED]: undefined,
     [AlbumListSort.ID]: undefined,
     [AlbumListSort.NAME]: AlbumListSortType.ALPHABETICAL_BY_NAME,
     [AlbumListSort.PLAY_COUNT]: AlbumListSortType.FREQUENT,

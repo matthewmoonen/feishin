@@ -265,6 +265,7 @@
         "playbackPausedDueToError": "La lecture a été suspendue en raison d'une erreur"
     },
     "filter": {
+        "frequentlyPlayed": "Souvent joués",
         "mostPlayed": "Les plus joués",
         "playCount": "Nombre d'écoutes",
         "isCompilation": "Est une compilation",
@@ -375,6 +376,7 @@
             "multipleMusicFolders": "{{count}} dossiers musique sélectionnés"
         },
         "home": {
+            "frequentlyPlayed": "Souvent joués",
             "mostPlayed": "Les plus joués",
             "newlyAdded": "Ajoutés récemment",
             "explore": "Explorer depuis la bibliothèque",

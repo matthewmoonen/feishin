@@ -271,6 +271,7 @@
         "playbackPausedDueToError": "Odtwarzanie zostało wstrzymane z powodu błędu"
     },
     "filter": {
+        "frequentlyPlayed": "Często odtwarzane",
         "mostPlayed": "Najczęściej odtwarzane",
         "playCount": "Liczba odtworzeń",
         "isCompilation": "Jest kompilacją",
@@ -545,6 +546,7 @@
             "collections": "Kolekcje"
         },
         "home": {
+            "frequentlyPlayed": "Często odtwarzane",
             "mostPlayed": "Najczęściej odtwarzane",
             "newlyAdded": "Niedawno dodane",
             "title": "$t(common.home)",

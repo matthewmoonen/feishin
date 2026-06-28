@@ -289,6 +289,7 @@
         "systemFontError": "خطایی هنگام تلاش برای دریافت فونت‌های سیستم رخ داد"
     },
     "filter": {
+        "frequentlyPlayed": "اغلب پخش‌شده",
         "mostPlayed": "بیشتر پخش شده",
         "comment": "نظر",
         "playCount": "تعداد پخش",
@@ -506,6 +507,7 @@
             "upNext": "در ادامه"
         },
         "home": {
+            "frequentlyPlayed": "اغلب پخش‌شده",
             "mostPlayed": "بیشترین پخش‌شده‌ها",
             "title": "$t(common.home)",
             "explore": "در کتاب‌خانه‌ی خود کاوش کنید",

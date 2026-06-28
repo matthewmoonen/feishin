@@ -368,6 +368,11 @@ const ALBUM_LIST_FILTERS: Partial<
             value: AlbumListSort.PLAY_COUNT,
         },
         {
+            defaultOrder: SortOrder.DESC,
+            name: i18n.t('filter.frequentlyPlayed'),
+            value: AlbumListSort.FREQUENTLY_PLAYED,
+        },
+        {
             defaultOrder: SortOrder.ASC,
             name: i18n.t('filter.name'),
             value: AlbumListSort.NAME,
@@ -687,6 +692,11 @@ const ALBUM_ARTIST_LIST_FILTERS: Partial<
             value: AlbumArtistListSort.PLAY_COUNT,
         },
         {
+            defaultOrder: SortOrder.DESC,
+            name: i18n.t('filter.frequentlyPlayed'),
+            value: AlbumArtistListSort.FREQUENTLY_PLAYED,
+        },
+        {
             defaultOrder: SortOrder.ASC,
             name: i18n.t('filter.name'),
             value: AlbumArtistListSort.NAME,
@@ -771,6 +781,11 @@ const ARTIST_LIST_FILTERS: Partial<
             defaultOrder: SortOrder.DESC,
             name: i18n.t('filter.mostPlayed'),
             value: ArtistListSort.PLAY_COUNT,
+        },
+        {
+            defaultOrder: SortOrder.DESC,
+            name: i18n.t('filter.frequentlyPlayed'),
+            value: ArtistListSort.FREQUENTLY_PLAYED,
         },
         {
             defaultOrder: SortOrder.ASC,

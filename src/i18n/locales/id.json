@@ -247,6 +247,7 @@
         "isRated": "Apakah ini terklasifikasi",
         "isRecentlyPlayed": "Baru saja diputar",
         "lastPlayed": "Terakhir diputar",
+        "frequentlyPlayed": "Sering diputar",
         "mostPlayed": "Paling sering diputar",
         "name": "Nama",
         "note": "Catatan",
@@ -509,6 +510,7 @@
         },
         "home": {
             "explore": "Jelajahi dari pustaka anda",
+            "frequentlyPlayed": "Sering diputar",
             "mostPlayed": "Paling banyak diputar",
             "newlyAdded": "Rilis baru ditambahkan",
             "recentlyPlayed": "Baru saja diputar",
